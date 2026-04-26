@@ -1,0 +1,29 @@
+[package]
+name = "breakout"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+bevy = { version = "0.18.1", features = ["dynamic_linking"] }
+
+[profile.dev]
+opt-level = 1
+
+[profile.dev.package."*"]
+opt-level = 3
+
+[profile.release]
+codegen-units = 1
+lto = "thin"
+
+[profile.wasm-release]
+inherits = "release"
+opt-level = "s"
+strip = "debuginfo"
+
+[package.metadata.bundle]
+name = "ブロック崩し"
+identifier = "net.janimaru.breakout"
+version = "1.0.0"
+copyright = "Copyright © 2026 janimaru0704. All rights reserved."
+category = "Game"
