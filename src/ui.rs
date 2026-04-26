@@ -89,7 +89,6 @@ fn spawn_start_msg(
     });
 }
 
-// クリア画面のテキスト表示
 // ゲームクリアの文字をスポーン
 fn spawn_clear_msg(
     mut commands: Commands,
