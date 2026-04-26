@@ -307,7 +307,7 @@ fn check_collision_paddle(
 
     // 近い点との距離が半径以下なら衝突
     if ball_pos.distance(closest_point) <= BALL_RADIUS {
-        // ボールのどのあたりに当たったか
+        // パドルのどのあたりに当たったか
         let offset = (ball_pos.x - paddle_pos.x) / (PADDLE_WIDTH / 2.0);
 
         // 反射角. 最大は60degに指定
